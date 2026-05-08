@@ -1,3 +1,10 @@
+import { HeroContainer } from '@/components/containers/HeroContainer'
+import { StudioIntroContainer } from '@/components/containers/StudioIntroContainer'
+import { MainLayout } from '@/layouts/MainLayout'
+
 export const HomePage = () => (
-  <main className="min-h-dvh bg-background text-foreground" aria-label="Architecture studio homepage" />
+  <MainLayout>
+    <HeroContainer />
+    <StudioIntroContainer />
+  </MainLayout>
 )

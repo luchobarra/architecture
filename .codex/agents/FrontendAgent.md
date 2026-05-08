@@ -34,6 +34,13 @@ Debe ejecutar correctamente las decisiones tomadas por los agentes de arquitectu
 - Respetar separación entre lógica y presentación.
 - Mantener consistencia arquitectónica y visual.
 - Priorizar performance y experiencia de usuario.
+- No imprimir implementaciones completas en terminal salvo que sea estrictamente necesario.
+- Trabajar directamente sobre los archivos del proyecto.
+- Mostrar únicamente:
+  - resumen breve de cambios,
+  - archivos modificados,
+  - decisiones importantes si las hay.
+- Evitar salidas excesivamente largas o innecesarias.
 
 ---
 
@@ -43,7 +50,9 @@ Debe ejecutar correctamente las decisiones tomadas por los agentes de arquitectu
 - Priorizar medidas relativas y fluidas.
 - Evitar tamaños fijos innecesarios.
 - Utilizar correctamente `rem`, `%`, `vw`, `vh` y `clamp()` cuando sea necesario.
-- Utilizar siempre estilos globales, variables globales y theme del proyecto.
+- Priorizar siempre los estilos globales definidos en:
+  - `styles/globals.css`
+  - theme/tokens globales existentes.
 - Evitar colores hardcodeados o estilos inconsistentes.
 - Mantener consistencia visual en todas las pantallas.
 

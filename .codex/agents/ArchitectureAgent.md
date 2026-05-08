@@ -24,6 +24,7 @@
 - No definir colores, tipografías o diseño final.
 - Primero pensar estructura, después implementación.
 - Antes de cambios grandes, explicar brevemente qué se va a modificar.
+- No escribir codigo, solo planificar, hacer que todo se respete, buscar errores y plantear soluciones.
 
 ## Objetivo
 

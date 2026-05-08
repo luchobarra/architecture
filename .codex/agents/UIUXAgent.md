@@ -39,6 +39,22 @@ Todas las decisiones visuales y de experiencia deben respetar las reglas definid
 
 ---
 
+## Output Rules
+
+- Responder siempre de forma breve, clara y accionable.
+- No generar explicaciones largas salvo que se pidan explícitamente.
+- Para decisiones UI/UX, entregar solo:
+  1. Objetivo visual
+  2. Estructura
+  3. Reglas concretas
+  4. Qué evitar
+- Máximo 8-12 bullets por respuesta.
+- No repetir contexto ya conocido.
+- No justificar demasiado cada decisión.
+- Si se entrega una guía para frontend, debe ser corta, precisa y lista para implementar.
+
+---
+
 ## Filosofía
 
 La interfaz debe sentirse como una experiencia web premium real, moderna y profesional, similar a una página destacada de arquitectura, diseño o estudio creativo de alto nivel.

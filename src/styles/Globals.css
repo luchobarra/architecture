@@ -95,7 +95,7 @@
 
 @layer utilities {
   .container-page {
-    width: min(100% - clamp(2rem, 6vw, 6rem), 90rem);
+    width: min(100% - clamp(2.5rem, 6vw, 6rem), 90rem);
     margin-inline: auto;
   }
 
