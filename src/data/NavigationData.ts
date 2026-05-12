@@ -2,19 +2,19 @@ import type { NavigationItem } from '@/types/NavigationTypes'
 
 export const navigationItems: NavigationItem[] = [
   {
-    label: 'Studio',
+    label: 'Estudio',
     href: '#studio',
   },
   {
-    label: 'Projects',
+    label: 'Proyectos',
     href: '#projects',
   },
   {
-    label: 'Services',
+    label: 'Servicios',
     href: '#services',
   },
   {
-    label: 'Contact',
+    label: 'Contacto',
     href: '#contact',
   },
 ]

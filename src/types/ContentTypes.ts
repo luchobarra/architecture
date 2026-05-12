@@ -2,7 +2,17 @@ export type HeroContent = {
   eyebrow: string
   title: string
   description: string
-  meta: string[]
+  ctaLabel: string
+  ctaHref: string
+}
+
+export type HeroVisualSlide = {
+  id: string
+  title: string
+  category: string
+  image: string
+  alt: string
+  isExterior?: boolean
 }
 
 export type StudioIntroContent = {

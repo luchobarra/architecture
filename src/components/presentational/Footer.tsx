@@ -5,17 +5,17 @@ type FooterProps = {
 }
 
 export const Footer = ({ navigationItems }: FooterProps) => (
-  <footer className="border-t border-border/50 bg-surface">
-    <div className="container-page flex flex-col gap-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
-      <p className="font-serif text-lg leading-none text-foreground">
-        Architecture Studio
+  <footer className="border-t border-textWhite/10 bg-accentDeep">
+    <div className="container-page flex flex-col gap-6 py-8 text-sm text-textWhite/54 sm:flex-row sm:items-center sm:justify-between">
+      <p className="font-serif text-lg leading-none text-textWhite/92">
+        Estudio Arquitectura
       </p>
 
-      <nav aria-label="Footer navigation">
+      <nav aria-label="Navegación del pie de página">
         <ul className="flex flex-wrap gap-x-5 gap-y-3">
           {navigationItems.map((item) => (
             <li key={item.href}>
-              <a className="transition-colors hover:text-foreground" href={item.href}>
+              <a className="transition-colors hover:text-textWhite" href={item.href}>
                 {item.label}
               </a>
             </li>

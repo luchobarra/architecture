@@ -1,45 +1,66 @@
-import type { HeroContent } from '@/types/ContentTypes'
+import { HeroDesktop } from '@/components/presentational/HeroDesktop'
+import { HeroMobile } from '@/components/presentational/HeroMobile'
+import { HeroTablet } from '@/components/presentational/HeroTablet'
+import type { HeroContent, HeroVisualSlide } from '@/types/ContentTypes'
 
 type HeroProps = {
+  activeVisualSlideId: string
   content: HeroContent
+  visualSlides: HeroVisualSlide[]
+  onSelectNextVisualSlide: () => void
+  onSelectPreviousVisualSlide: () => void
+  onSelectVisualSlide: (slideId: string) => void
 }
 
-export const Hero = ({ content }: HeroProps) => (
-  <section
-    id="hero"
-    aria-labelledby="hero-title"
-    className="bg-background py-16 sm:py-20 lg:py-28 xl:py-32"
-  >
-    <div className="container-page grid min-h-[calc(100svh-5rem)] items-center gap-12 lg:grid-cols-12 lg:gap-16">
-      <div className="max-w-[44rem] lg:col-span-6">
-        <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent sm:text-sm">
-          {content.eyebrow}
-        </p>
+export const Hero = ({
+  activeVisualSlideId,
+  content,
+  visualSlides,
+  onSelectNextVisualSlide,
+  onSelectPreviousVisualSlide,
+  onSelectVisualSlide,
+}: HeroProps) => {
+  const activeVisualSlide =
+    visualSlides.find((slide) => slide.id === activeVisualSlideId) ?? visualSlides[0]
+  const activeVisualSlideIndex = visualSlides.findIndex(
+    (slide) => slide.id === activeVisualSlide.id,
+  )
+  const activeVisualSlideNumber = activeVisualSlideIndex >= 0 ? activeVisualSlideIndex + 1 : 1
 
-        <h1
-          id="hero-title"
-          className="mt-6 text-balance font-serif text-[clamp(3.25rem,14vw,4.75rem)] leading-[0.94] text-foreground sm:text-[clamp(4.5rem,10vw,6.25rem)] lg:text-[clamp(5.5rem,7.5vw,8rem)]"
-        >
-          {content.title}
-        </h1>
+  return (
+    <section
+      id="hero"
+      aria-label={content.title}
+      className="relative isolate overflow-hidden bg-surface text-accentDeep sm:min-h-[45rem] sm:bg-accentDeep lg:min-h-[720px]"
+    >
+      <HeroMobile
+        activeVisualSlide={activeVisualSlide}
+        activeVisualSlideNumber={activeVisualSlideNumber}
+        content={content}
+        totalVisualSlides={visualSlides.length}
+        onSelectNextVisualSlide={onSelectNextVisualSlide}
+        onSelectPreviousVisualSlide={onSelectPreviousVisualSlide}
+      />
 
-        <p className="mt-7 max-w-[36rem] text-base leading-7 text-muted sm:text-lg sm:leading-8 lg:text-xl">
-          {content.description}
-        </p>
+      <HeroTablet
+        activeVisualSlide={activeVisualSlide}
+        activeVisualSlideId={activeVisualSlideId}
+        activeVisualSlideNumber={activeVisualSlideNumber}
+        content={content}
+        totalVisualSlides={visualSlides.length}
+        visualSlides={visualSlides}
+        onSelectVisualSlide={onSelectVisualSlide}
+      />
 
-        <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-xs uppercase tracking-[0.18em] text-muted">
-          {content.meta.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="lg:col-span-6">
-        <div
-          className="min-h-[18rem] border border-border/60 bg-surface sm:min-h-[24rem] lg:min-h-[clamp(32rem,58vh,42rem)]"
-          aria-hidden="true"
-        />
-      </div>
-    </div>
-  </section>
-)
+      <HeroDesktop
+        activeVisualSlide={activeVisualSlide}
+        activeVisualSlideId={activeVisualSlideId}
+        activeVisualSlideNumber={activeVisualSlideNumber}
+        content={content}
+        totalVisualSlides={visualSlides.length}
+        visualSlides={visualSlides}
+        onSelectVisualSlide={onSelectVisualSlide}
+      />
+    </section>
+  )
+}
