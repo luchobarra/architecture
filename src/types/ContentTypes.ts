@@ -15,8 +15,21 @@ export type HeroVisualSlide = {
   isExterior?: boolean
 }
 
-export type StudioIntroContent = {
-  statement: string
+export type StudioSectionContent = {
+  eyebrow: string
+  title: string
   description: string
-  concepts: string[]
+  image: string
+  imageAlt: string
+  imageCaption: string
+  metadata: {
+    label: string
+    value: string
+  }[]
+  sections: {
+    title: string
+    text: string
+  }[]
+  ctaLabel: string
+  ctaHref: string
 }

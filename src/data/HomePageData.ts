@@ -10,7 +10,7 @@ import InteriorOffice from '@/assets/images/InteriorOffice.jpg'
 import type {
   HeroContent,
   HeroVisualSlide,
-  StudioIntroContent,
+  StudioSectionContent,
 } from '@/types/ContentTypes'
 
 export const heroContent: HeroContent = {
@@ -89,10 +89,39 @@ export const heroVisualSlides: HeroVisualSlide[] = [
   },
 ]
 
-export const studioIntroContent: StudioIntroContent = {
-  statement:
-    'Cada proyecto nace de una conversación: lo que necesitás, lo que imaginás y la vida que querés construir.',
+export const studioSectionContent: StudioSectionContent = {
+  eyebrow: 'Sobre el estudio',
+  title: 'Creamos hogares serenos, precisos y profundamente habitados.',
   description:
-    'Te acompañamos con una mirada profesional y cercana para darle forma a un hogar único, pensado en detalle, con decisiones claras y una arquitectura que se sienta verdaderamente tuya.',
-  concepts: ['Escucha real', 'Diseño a medida', 'Confianza profesional'],
+    'Una arquitectura de líneas claras, atmósferas cálidas y decisiones pensadas para acompañar la vida cotidiana.',
+  image: InteriorCourtyard,
+  imageAlt:
+    'Patio interior de una residencia contemporánea con espejo de agua y vegetación.',
+  imageCaption: 'Residencia privada / Patio interior / Estudio de luz natural',
+  metadata: [
+    {
+      label: 'Especialidad',
+      value: 'Residencial',
+    },
+    {
+      label: 'Proceso',
+      value: 'Diseño + Obra',
+    },
+    {
+      label: 'Lenguaje',
+      value: 'Luz y materia',
+    },
+  ],
+  sections: [
+    {
+      title: 'Filosofía',
+      text: 'Creemos en una arquitectura donde la luz, la proporción y la materialidad construyen espacios atemporales, cálidos y conectados con la vida cotidiana.',
+    },
+    {
+      title: 'Enfoque',
+      text: 'Cada proyecto comienza con una escucha cuidadosa. Convertimos necesidades, ideas y contexto en decisiones claras de diseño, documentación y construcción.',
+    },
+  ],
+  ctaLabel: 'Conocer el estudio',
+  ctaHref: '#contact',
 }
