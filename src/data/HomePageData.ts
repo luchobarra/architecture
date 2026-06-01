@@ -7,10 +7,12 @@ import InteriorGallery from '@/assets/images/InteriorGallery.jpg'
 import InteriorKitchen from '@/assets/images/InteriorKitchen.jpg'
 import InteriorLivingRoom from '@/assets/images/InteriorLivingRoom.jpg'
 import InteriorOffice from '@/assets/images/InteriorOffice.jpg'
+import StudioWorktable from '@/assets/images/StudioWorktable.jpg'
 import type {
   HeroContent,
   HeroVisualSlide,
   StudioSectionContent,
+  SuccessStoriesSectionContent,
 } from '@/types/ContentTypes'
 
 export const heroContent: HeroContent = {
@@ -94,10 +96,10 @@ export const studioSectionContent: StudioSectionContent = {
   title: 'Creamos hogares serenos, precisos y profundamente habitados.',
   description:
     'Una arquitectura de líneas claras, atmósferas cálidas y decisiones pensadas para acompañar la vida cotidiana.',
-  image: InteriorCourtyard,
+  image: StudioWorktable,
   imageAlt:
-    'Patio interior de una residencia contemporánea con espejo de agua y vegetación.',
-  imageCaption: 'Residencia privada / Patio interior / Estudio de luz natural',
+    'Mesa de trabajo de un estudio de arquitectura con planos, maqueta y muestras de materiales.',
+  imageCaption: 'Mesa de estudio / Planos / Materialidad',
   metadata: [
     {
       label: 'Especialidad',
@@ -112,16 +114,83 @@ export const studioSectionContent: StudioSectionContent = {
       value: 'Luz y materia',
     },
   ],
-  sections: [
+  concepts: [
     {
-      title: 'Filosofía',
-      text: 'Creemos en una arquitectura donde la luz, la proporción y la materialidad construyen espacios atemporales, cálidos y conectados con la vida cotidiana.',
+      indexLabel: '01',
+      title: 'Quiénes somos',
+      highlight: 'Un estudio que proyecta desde la escucha.',
+      body:
+        'Trabajamos con una mirada cercana, técnica y sensible para entender cómo vive cada cliente antes de dibujar una respuesta.',
     },
     {
-      title: 'Enfoque',
-      text: 'Cada proyecto comienza con una escucha cuidadosa. Convertimos necesidades, ideas y contexto en decisiones claras de diseño, documentación y construcción.',
+      indexLabel: '02',
+      title: 'Qué hacemos',
+      highlight: 'Diseño residencial con dirección clara.',
+      body:
+        'Desarrollamos proyectos integrales desde la idea inicial hasta la definición de obra, ordenando necesidades, luz y materialidad.',
     },
   ],
-  ctaLabel: 'Conocer el estudio',
-  ctaHref: '#contact',
+  ctaLabel: 'Nuestros proyectos',
+  ctaHref: '#success-stories',
+}
+
+export const successStoriesSectionContent: SuccessStoriesSectionContent = {
+  eyebrow: 'Proyectos recientes',
+  title: 'Residencias diseñadas para vivir mejor, con luz, calma y precisión.',
+  description:
+    'Cada casa parte de una forma distinta de habitar. Traducimos necesidades reales en espacios claros, cálidos y construidos con atención al detalle.',
+  stories: [
+    {
+      id: 'casa-norte',
+      title: 'Casa Norte',
+      location: 'San Isidro',
+      year: '2025',
+      category: 'Vivienda familiar',
+      metric: 'Interior + paisaje',
+      description:
+        'Una casa pensada para una familia que buscaba amplitud sin perder intimidad. El estar se abre al jardín con galerías profundas, madera cálida y una transición natural entre vida interior y exterior.',
+      image: InteriorLivingRoom,
+      imageAlt:
+        'Estar de una vivienda familiar contemporánea abierto hacia un jardín privado.',
+    },
+    {
+      id: 'villa-umbria',
+      title: 'Villa Umbría',
+      location: 'Mendoza',
+      year: '2024',
+      category: 'Casa de retiro',
+      metric: 'Paisaje + materialidad',
+      description:
+        'Un refugio de descanso integrado al paisaje mendocino. La piedra, la madera y las sombras largas ordenan una experiencia serena, con espacios sociales abiertos a la montaña y protegidos del sol directo.',
+      image: InteriorDiningRoom,
+      imageAlt:
+        'Comedor y galería de una casa de retiro con piedra, madera y vista a la montaña.',
+    },
+    {
+      id: 'patio-litoral',
+      title: 'Patio Litoral',
+      location: 'Rosario',
+      year: '2025',
+      category: 'Reforma integral',
+      metric: 'Luz + ventilación',
+      description:
+        'La intervención recupera una casa urbana cerrada y la convierte en una secuencia de patios habitables. El agua, el ladrillo y la vegetación llevan luz y ventilación a los ambientes principales.',
+      image: InteriorCourtyard,
+      imageAlt:
+        'Patio interior urbano con espejo de agua, ladrillo visto, vegetación y galerías vidriadas.',
+    },
+    {
+      id: 'suite-clara',
+      title: 'Suite Clara',
+      location: 'Nordelta',
+      year: '2024',
+      category: 'Suite principal',
+      metric: 'Descanso + guardado',
+      description:
+        'Una suite diseñada como pausa dentro de la rutina diaria. El proyecto integra descanso, vestidor y baño con carpinterías a medida, iluminación indirecta y una paleta suave de madera y textiles naturales.',
+      image: InteriorOffice,
+      imageAlt:
+        'Suite principal cálida con carpinterías de madera, vestidor integrado e iluminación indirecta.',
+    },
+  ],
 }

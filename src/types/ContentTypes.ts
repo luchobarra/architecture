@@ -15,6 +15,13 @@ export type HeroVisualSlide = {
   isExterior?: boolean
 }
 
+export type StudioConcept = {
+  indexLabel: string
+  title: string
+  highlight: string
+  body: string
+}
+
 export type StudioSectionContent = {
   eyebrow: string
   title: string
@@ -26,10 +33,26 @@ export type StudioSectionContent = {
     label: string
     value: string
   }[]
-  sections: {
-    title: string
-    text: string
-  }[]
+  concepts: StudioConcept[]
   ctaLabel: string
   ctaHref: string
+}
+
+export type SuccessStory = {
+  id: string
+  title: string
+  location: string
+  year: string
+  category: string
+  metric: string
+  description: string
+  image: string
+  imageAlt: string
+}
+
+export type SuccessStoriesSectionContent = {
+  eyebrow: string
+  title: string
+  description: string
+  stories: SuccessStory[]
 }
